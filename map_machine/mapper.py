@@ -112,26 +112,26 @@ class Map:
         nodes: list[Point] = sorted(
             constructor.points, key=lambda x: -x.priority
         )
-        logging.info("Drawing main icons...")
-        for node in nodes:
-            node.draw_main_shapes(self.svg, occupied)
+        #logging.info("Drawing main icons...")
+        #for node in nodes:
+        #    node.draw_main_shapes(self.svg, occupied)
 
-        logging.info("Drawing extra icons...")
-        for point in nodes:
-            point.draw_extra_shapes(self.svg, occupied)
+        #logging.info("Drawing extra icons...")
+        #for point in nodes:
+        #    point.draw_extra_shapes(self.svg, occupied)
 
-        logging.info("Drawing texts...")
-        for point in nodes:
-            if (
-                not self.configuration.is_wireframe()
-                and self.configuration.label_mode != LabelMode.NO
-            ):
-                point.draw_texts(
-                    self.svg, occupied, self.configuration.label_mode
-                )
+        #logging.info("Drawing texts...")
+        #for point in nodes:
+        #    if (
+        #        not self.configuration.is_wireframe()
+        #        and self.configuration.label_mode != LabelMode.NO
+        #    ):
+        #        point.draw_texts(
+        #            self.svg, occupied, self.configuration.label_mode
+        #        )
 
-        if self.configuration.show_credit:
-            self.draw_credits(constructor.flinger.size)
+        #if self.configuration.show_credit:
+        #    self.draw_credits(constructor.flinger.size)
 
     def draw_buildings(self, constructor: Constructor) -> None:
         """Draw buildings: shade, walls, and roof."""
