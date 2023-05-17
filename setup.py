@@ -58,6 +58,7 @@ setup(
             "icons/config.json",
             "icons/LICENSE",
             "scheme/default.yml",
+            "scheme/VidhosticeSDK.yml",
         ],
     },
     python_requires=">=3.9",
